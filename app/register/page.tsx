@@ -19,8 +19,8 @@ export default function RegisterPage() {
         <div className="text-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">
             Déjà un compte ?{' '}
-            <Link 
-              href="/login" 
+            <Link
+              href="/login"
               className="font-medium text-green-600 hover:text-green-500 dark:text-green-400"
             >
               Se connecter
