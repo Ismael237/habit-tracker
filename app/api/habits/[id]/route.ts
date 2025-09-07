@@ -4,12 +4,12 @@ import { prisma } from '@/lib/db'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await requireAuth()
     const userId = session.userId!
-    const resolvedParams = await params
+    const resolvedParams = await context.params
     const habitId = resolvedParams.id
 
     const habit = await prisma.habit.findFirst({
@@ -46,12 +46,12 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await requireAuth()
     const userId = session.userId!
-    const resolvedParams = await params
+    const resolvedParams = await context.params
     const habitId = resolvedParams.id
     const body = await request.json()
 
@@ -125,12 +125,12 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await requireAuth()
     const userId = session.userId!
-    const resolvedParams = await params
+    const resolvedParams = await context.params
     const habitId = resolvedParams.id
 
     // Verify habit belongs to user
