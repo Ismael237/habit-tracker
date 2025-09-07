@@ -34,7 +34,7 @@ export default function NotFound() {
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto leading-relaxed">
                 Il semblerait que cette page ait perdu sa streak... 
-                Elle n'existe pas ou a été déplacée.
+                Elle n&apos;existe pas ou a été déplacée.
               </p>
             </div>
 
@@ -57,7 +57,7 @@ export default function NotFound() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Vérifier l'URL saisie</span>
+                    <span>Vérifier l&apos;URL saisie</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
@@ -90,7 +90,7 @@ export default function NotFound() {
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 💡 <strong>Astuce :</strong> Maintenez vos habitudes même quand vous vous perdez ! 
-                Une bonne streak ne s'arrête jamais. 🎯
+                Une bonne streak ne s&apos;arrête jamais. 🎯
               </p>
             </div>
           </div>

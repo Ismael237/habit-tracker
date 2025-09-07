@@ -40,7 +40,7 @@ export function useNotifications() {
     }
   }
 
-  const scheduleNotification = async (title: string, body: string, time: string) => {
+  const scheduleNotification = async (title: string, body: string) => {
     if (permission !== 'granted') {
       const granted = await requestPermission()
       if (!granted) return false
@@ -67,8 +67,7 @@ export function useNotifications() {
   const sendTestNotification = async () => {
     return scheduleNotification(
       'Habit Tracker',
-      'Vos habitudes vous attendent ! 🎯',
-      ''
+      'Vos habitudes vous attendent ! 🎯'
     )
   }
 
