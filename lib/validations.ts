@@ -25,7 +25,7 @@ export const habitSchema = z.object({
 
 export const habitEntrySchema = z.object({
   habitId: z.cuid('ID d\'habitude invalide'),
-  date: z.iso.datetime('Date invalide'),
+  date: z.string().transform((str) => new Date(str)),
   completed: z.boolean(),
   conditionsMet: z.array(z.boolean()).optional(),
 })
