@@ -54,7 +54,6 @@ export function useNotifications() {
         icon: '/icon-192x192.png',
         badge: '/icon-192x192.png',
         tag: 'habit-reminder',
-        renotify: true,
       })
       
       return true
